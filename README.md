@@ -1,4 +1,4 @@
-# mibarrio
+# GRPC - Proof of Concept
 
 A new Flutter project.
 
