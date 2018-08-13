@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service S {
+    rpc m (stream TransportPayloadStringBondEN) returns (stream ResultDtoBondEN);
+}
+
+message TransportPayloadStringBondEN{
+    int32 sessionToken = 1; 
+    bytes payload = 2;
+}
+
+message ResultDtoBondEN{
+    TransportPayloadStringBondEN dto = 1;
+}
+
+message Casa {
+    string calle = 1;
+    int32 numero = 2;
+}
