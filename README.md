@@ -1,8 +1,15 @@
 # GRPC - Proof of Concept
 
-A new Flutter project.
+Client side using connection with gRPC and Protobuf.
 
-## Getting Started
+## Install on Mac
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+```sh
+brew tap dart-lang/dart
+brew install dart
+pub global activate protoc_plugin
+vim ~/.zshrc
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+source ~/.zshrc
+protoc --dart_out=grpc:protos -Iprotos protos/helloworld.proto
+```
